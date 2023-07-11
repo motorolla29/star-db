@@ -1,3 +1,10 @@
+.welcome-caption {
+  font-size: 20px;
+  text-shadow: 1px 5px 2px darkcyan;
+  text-align: center;
+  margin: 25px auto;
+}
+
 .stardb-app {
   padding: 0 1rem;
 }
