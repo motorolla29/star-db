@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 const PersonDetails = (props) => {
   const { id } = useParams();
   return (
-    <ItemDetails {...props} itemId={id}>
+    <ItemDetails {...props} itemId={id} select>
       <Record field="gender" label="Gender" />
       <Record field="eyeColor" label="Eye Color" />
     </ItemDetails>

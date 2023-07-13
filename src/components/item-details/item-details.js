@@ -16,7 +16,7 @@ export default class ItemDetails extends Component {
   state = {
     item: null,
     image: null,
-    loading: true,
+    loading: false,
   };
 
   componentDidMount() {
@@ -37,6 +37,7 @@ export default class ItemDetails extends Component {
   updateItem() {
     const { itemId, getData, getImageUrl } = this.props;
     if (!itemId) {
+      this.setState({ item: null, loading: false });
       return;
     }
 
@@ -47,7 +48,14 @@ export default class ItemDetails extends Component {
 
   render() {
     const { item, image, loading } = this.state;
-    if (!item) {
+    const { select } = this.props;
+    if (!item && select && loading) {
+      return <Spinner />;
+    }
+    if (!item && select) {
+      return <h4>Select a item</h4>;
+    }
+    if (!item && !select) {
       return <Spinner />;
     }
     const { name } = item;
