@@ -1,6 +1,5 @@
 import React from 'react';
 import { PlanetList } from '../sw-components';
-import { withRouter } from '../../utils';
 import { useNavigate } from 'react-router-dom';
 
 const PlanetsPage = () => {
@@ -8,4 +7,4 @@ const PlanetsPage = () => {
 
   return <PlanetList onItemSelected={(itemId) => history(itemId)} />;
 };
-export default withRouter(PlanetsPage);
+export default PlanetsPage;

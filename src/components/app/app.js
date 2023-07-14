@@ -44,6 +44,7 @@ export default class App extends Component {
                 <Route path="/planets/:id" element={<PlanetDetails />} />
                 <Route path="/starships" element={<StarshipsPage />} exact />
                 <Route path="/starships/:id" element={<StarshipDetails />} />
+                <Route element={<h2>Page not found</h2>} />
               </Routes>
             </div>
           </Router>
