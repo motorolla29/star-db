@@ -19,9 +19,6 @@ const Header = ({ onServiceChange }) => {
           <Link to="/starships/">Starships</Link>
         </li>
       </ul>
-      <button onClick={onServiceChange} className="btn btn-primary btm-sm">
-        Change Service
-      </button>
     </div>
   );
 };
